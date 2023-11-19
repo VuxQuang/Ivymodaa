@@ -17,6 +17,15 @@ header{
     padding: 30 50px;
     height: 70px;
     align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    background: rgb(255, 255, 255, 0.3);
+}
+header:hover{
+    background: rgb(255, 255, 255, 1);   
 }
 .logo{
     flex: 1;
@@ -33,7 +42,7 @@ header{
 }
 .menu li:hover .sub-menu{
     visibility: visible;
-    top: 30px;
+    top: 50px;
 }
 .sub-menu{
     position: absolute;
@@ -42,8 +51,10 @@ header{
     padding: 10px 0 10px 20px;
     list-style: none;
     visibility: hidden;
-    top: 50px;
+    top: 60px;
     transition: 0.3s;
+    z-index: 1;
+    background: white;
 }
 .sub-menu li a{
     font-weight: normal;
@@ -85,10 +96,118 @@ header{
     width: 100%;
     border: none;
     border-bottom: 1px solid #333333;
-    
+    background:transparent;
+    outline:none;
 }
-
 .others > li:first-child i{
     position: absolute;
     right: 10px;
+}
+#Slider{
+    padding-bottom: 30px;
+    border-bottom: 2px solid #333333;
+    overflow: hidden;
+}
+.aspect-ratio-169 {
+    display: block;
+    position: relative;
+    padding-top: 56.25%;
+    transition: 0.3s;
+  }
+  
+.aspect-ratio-169 img {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: auto;
+    top: 0;
+    left: 0;
+}
+.dot-container{
+    position: absolute;
+    height: 30px;
+    width: 300px;
+    display: flex;
+    margin-top: -310px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin-left: 800px;
+}
+.dot{
+    height: 18px;
+    width: 18px;
+    background-color: black;
+    border-radius: 100%;
+    margin-right: 40px;
+}
+.dot .active{
+    background-color: black;
+}
+/*----------------------------------------*/
+
+.app-container{
+    text-align: center;
+    align-items: center;
+    padding: 150px 0 50px 0;
+}
+.app-google{
+    margin: 5px;
+}
+.app-google img{
+    height: 100px;
+}
+.app-container p{
+    line-height: 20px;
+    letter-spacing: 1px;
+    font-size: 17px;
+    color:black;
+    font-weight: bold;
+}
+.app-container input{
+    margin-top: 50px;
+    border: none;
+    border-bottom: 1px solid black;
+    padding-bottom: 20px;
+    width: 400px;
+    text-align: center;
+}
+
+/*-------------footer---------------------------*/
+footer{
+    text-align: center;
+}
+.footer-top{
+    display:flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    height: 70px;
+}
+.footer-top img{
+    height: 80px;
+}
+.footer-top li{
+    padding: 0 12px;
+    position: relative;
+    border-right: #333333;
+}
+.footer-top li::after{
+    content:"";
+    display: block;
+    width: 1px;
+    height: 80%;
+    background: white;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    
+}
+.footer-top li:last-child::after{
+    display: none;
+}
+.footer-bottom p{
+    text-align: center;
+    justify-content: center;
 }
